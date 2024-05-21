@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" id="form">
+        <h1>formulario</h1>
+        <input type="text" name="nombre" id="nombre" class="form-control" placeholder="nombre">
+        <br>
+        <span class="error" id="errorNombre"></span>
+        <br>
+        <br>
+        <input type="email" name="email" id="email" class="form-control" placeholder="e-mail">
+        <br>
+        <span class="error" id="errorEmail"></span>
+        <br>
+        <br>
+        <input type="tel" name="telefono" id="telefono" class="form-control" placeholder="telefono">
+        <br>
+        <span class="error" id="errorTelefono"></span>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+      </form>
+</body>
+<script>
+    let loginForm = document.getElementById("loginForm");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  let nombre = document.getElementById("nombre")
+  let email = document.getElementById("email")
+  let telefono = document.getElementById("telefono")
+  
+  var errorNombre = document.getElementById("errorNombre")
+  var errorEmail = document.getElementById("errorEmail")
+  var errorTelefono = document.getElementById("errorTelefono")
+
+
+
+
+    const regUserName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/;
+    const regUserEmail = /^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$/;
+    const regUserTelefono = /^\d{10}$/;
+
+//   if (username.value == "" || password.value == "") {
+//     alert("Ensure you input a value in both fields!")
+//   } else {
+//     // perform operation with form input
+//     alert("This form has been successfully submitted!")
+//     console.log(
+//       `This form has a username of ${username.value} and password of ${password.value}`
+//     );
+
+
+if (!regUserName.test(nombre.value) ) {
+    errorNombre.innerHTML = "Por favor, ingresa tu nombre";
+      valido = false;
+    
+  } else{
+    errorNombre.innerHTML = ""
+    //   valido = true;
+  }
+
+
+
+
+
+
+  if (!regUserEmail.test(email.value) ) {
+    errorEmail.innerHTML = "Por favor, ingresa tu consulta";
+      valido = false;
+    
+  } else{
+    errorEmail.innerHTML = ""
+    //   valido = false;
+  }
+
+
+
+
+
+  if (!regUserTelefono.test(telefono.value) ) {
+    errorTelefono.innerHTML = "Por favor, ingresa tu telefono";
+      valido = false;
+    
+  } else{
+    errorTelefono.innerHTML = ""
+    //   valido = false;
+  }
+
+
+
+
+  
+
+
+    nombre.value = ""
+    email.value = ""
+    telefono.value = ""
+  
+})
+</script>
+
+</html>

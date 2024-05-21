@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="../images/favico.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Italiana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/main.css" type="text/css">
+    <link rel="stylesheet" href="../css/form.css" type="text/css">
+    <title>INTEGRAL WELLNESS</title>
+</head>
+<body>
+    <main>
+        <header>
+            <div id="logo">INTEGRAL WELLNESS</div>
+        </header>
+        <nav>
+            <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="nutricionSaludable.html">Nutricion Saludable</a></li>
+            <li><a href="saludFisica.html">Salud fisica</a></li>
+            <li><a href="equilibrio.html">Equilibrio</a></li>
+            <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <!-- <article>
+                    <p>En Integral Wellness, creemos que el cuidado personal es esencial para vivir una vida plena y equilibrada.</p>
+                    <p>Nos apasiona compartir contigo conocimientos sobre nutrición saludable, salud física y equilibrio mental y emocional.</p>
+                    <p>Sin embargo, tu experiencia y opinión son igualmente importantes para nosotros.</p>
+                    <p>Nos encantaría saber de ti. Si tienes alguna consulta, sugerencia o simplemente deseas compartir tus pensamientos sobre nuestro contenido, no dudes en ponerte en contacto con nosotros.</p>
+                    <p>Estamos aquí para escucharte y aprender juntos en este viaje hacia el bienestar integral.</p>
+                    <h4>¿Cómo puedes contactarnos?</h4>
+                    <p>Completa el formulario a continuación y estaremos encantados de responder a tu mensaje a la brevedad posible.</p>
+                    <p>Ya sea que tengas una pregunta sobre una receta, necesites más información sobre nuestras recomendaciones de salud física o mental, o quieras sugerir un tema que te gustaría ver en el blog, estamos aquí para ayudarte.</p>    
+            </article>  -->
+            <article>
+                
+                <form action="" method="" id="form">
+                    <!-- <fieldset> -->
+                        <legend><h3>&nbsp; Fomulario de contacto &nbsp;</h3></legend>
+                        <br>
+                        <label for="nombre">Nombre*</label> <!--*hace que se vea que es obligatorio completar el campo-->
+                        
+                        <input type="text" name="nombre" id="nombre" maxlength="15"  required>
+                        <br><span class="error" id="errorNombre"></span><br>
+
+
+                        
+                        <!--lo que se escriba en for"" debe ser el mismo texto para name "" y id"" -->
+                        <!--requerid:requerido (para evitar que permita vacio), size:limita tamaño de caractes, max es lo max permitido-->
+                        <label for="email">Correo electrónico*</label>
+                        <input type="email" name="email" id="email" required>
+                        <br><span class="error" id="errorEmail"></span>
+                        <br><br><!--se usa salto de linea, para separar-->
+
+
+
+                        <label for="telefono">Teléfono*</label>
+                        <input type="tel" name="telefono" id="telefono" maxlength="15" required>
+                        <br><span class="error" id="errorTelefono"></span>
+
+
+
+                        <!--no deben usarse acentos ni para el for, name y ID-->
+                        <br><br><!--se usa salto de linea, para separar-->
+            
+
+
+
+                        <label for="consulta">Tu consulta tiene relación con*:</label>
+                        <select name="consulta" id="consulta" required>         
+                            <option value="1">Elegi uno</option>
+                            <option value="2">Nutrición saludable</option>
+                            <option value="3">Salud física</option>
+                            <option value="4">Equilibrio</option>
+                        </select>
+                        <br><span class="error" id="errorConsulta"></span><br><br>
+
+
+
+            
+                        <label for="mensaje">Dejanos tu mensaje:</label><br><br>
+                        <textarea name="mensaje" id="mensaje" rows="8" cols="36" placeholder="Escribe aqui su mensaje..." ></textarea>
+                        <br>span class="error" id="errorMensaje"></span>
+                        <br><br><br>
+                        
+
+
+
+
+            
+                        <label for="merdioContacto">¿Prefieres que te respondamos a través de que medio?</label><br><br>
+                        <label for="contactoCorreo">Correo electrónico</label>
+                        <input type="radio" name="merdioContacto" id="merdioCcontactoCorreo" value="correo" required><br>
+                        <label for="contactoTelefono">Teléfono</label>
+                        <input type="radio" name="merdioContacto" id="merdioCcontactoTelefono" value="telefono" required>
+                        <br><br><br>
+            
+                        <label for="suscripción">¿Deseas suscribirte a nuestro boletín semanal?</label><br><br>
+                        <label for="suscripcionSi">SI</label>
+                        <input type="radio" name="suscripción" id="suscripciónSi" value="si" required><br>
+                        <label for="suscripcionNo">NO</label>
+                        <input type="radio" name="suscripción" id="suscripcionNo" value="no" required>
+                        <br><br><br>
+            
+                        <label for="secciones">¿Qué nuevas secciones te gustaría ver en Integral Wellness?</label><br><br>
+                        <input type="checkbox" name="secciones" id="secciones1" value="1"> Medicina alternativa.<br>
+                        <input type="checkbox" name="secciones" id="secciones2" value="2"> Salud financiera.<br>
+                        <input type="checkbox" name="secciones" id="secciones3" value="3"> Tecnología y bienestar.
+                        <br><br>
+            
+                      <!--para cuando se pida adjuntar foto-->
+                      <p><b>Nos encantaría ver cómo estás implementando nuestras recetas saludables en tu vida diaria.</b></p><br>
+                      <p><b>¿Preparaste algún plato delicioso siguiendo nuestras sugerencias?</b></p><br>
+
+
+                        <label for="adjunto">Comparte con nosotros una foto de tu creación culinaria.</label><br><br>
+                        <input type="file" name="adjunto" id="adjunto">
+                        <br><span class="error" id="errorAdjunto"></span>
+                        <br><br>
+
+
+                        <p><b>¡Estamos ansiosos por ver tu creatividad en la cocina y cómo disfrutas de una alimentación nutritiva y sabrosa!</b></p><br>
+                    <!-- </fieldset> -->
+
+                    <input type="checkbox" name="terminos" id="terminos" required> Acepta los términos y condiciones.
+                    <br><br>
+                    <input type="submit" value="Enviar datos">
+                    <input type="reset" value="Borrar">
+                    
+                </form>
+            </article>
+        </section>
+
+        <aside>
+            <h4>Nosotros</h4>
+            <br>
+            <p>En <b>Integral Wellness</b>, creemos que el cuidado personal es esencial para vivir una vida plena y equilibrada.</p>
+                    <p>Nos apasiona compartir contigo conocimientos sobre nutrición saludable, salud física y equilibrio mental y emocional.</p>
+                    <p>Sin embargo, tu experiencia y opinión son igualmente importantes para nosotros.</p>
+                    <p>Nos encantaría saber de ti. Si tienes alguna consulta, sugerencia o simplemente deseas compartir tus pensamientos sobre nuestro contenido, no dudes en ponerte en contacto con nosotros.</p>
+                    <p>Estamos aquí para escucharte y aprender juntos en este viaje hacia el bienestar integral.</p>
+                    <h4>¿Cómo puedes contactarnos?</h4>
+                    <p>Completa el formulario a continuación y estaremos encantados de responder a tu mensaje a la brevedad posible.</p>
+                    <p>Ya sea que tengas una pregunta sobre una receta, necesites más información sobre nuestras recomendaciones de salud física o mental, o quieras sugerir un tema que te gustaría ver en el blog, estamos aquí para ayudarte.</p>    
+        </aside>
+
+        <footer>
+            <div class="redes-footer">
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook icon-redes-footer" ></i></a>
+                <a href="https://instagram.com"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
+                <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp icon-redes-footer"></i></a>
+                <a href="https://youtube.com"><i class="fa-brands fa-youtube icon-redes-footer"></i></a>
+            </div>
+            <div class="parrafo-footer">
+                <p>© 2024 Todos los derechos reservados | Sitio desarrollado por: Wellness.diseño</p></p>
+            </div>
+        </footer>
+    </main>
+    <script src="https://kit.fontawesome.com/dc3dfaafbc.js" crossorigin="anonymous"></script>
+    <script src="../js/script.js"></script>
+    
+   
+</body>
+</html>
