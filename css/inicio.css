@@ -434,7 +434,7 @@ nav li a {
     
 
     main{
-    background-color:  rgb(255, 0, 234);
+    /* background-color:  rgb(255, 0, 234); */
     /* color:  rgb(255, 0, 234); */
     display: grid;
     grid-template-columns: 1fr;
