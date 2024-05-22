@@ -8,7 +8,6 @@
     <link rel="shortcut icon" href="../images/favico.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Italiana&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css" type="text/css">
-    <link rel="stylesheet" href="../css/form.css" type="text/css">
     <title>INTEGRAL WELLNESS</title>
 </head>
 <body>
@@ -39,13 +38,13 @@
             </article>  -->
             <article>
                 
-                <form action="" method="" id="form">
+                <form id="form">
                     <!-- <fieldset> -->
-                        <legend><h3>&nbsp; Fomulario de contacto &nbsp;</h3></legend>
+                        <h3>&nbsp; Fomulario de contacto &nbsp;</h3>
                         <br>
                         <label for="nombre">Nombre*</label> <!--*hace que se vea que es obligatorio completar el campo-->
                         
-                        <input type="text" name="nombre" id="nombre" maxlength="15"  required>
+                        <input type="text" name="nombre" id="nombre" maxlength="15"  minlength="3" required>
                         <br><span class="error" id="errorNombre"></span><br>
 
 
@@ -73,10 +72,10 @@
 
                         <label for="consulta">Tu consulta tiene relación con*:</label>
                         <select name="consulta" id="consulta" required>         
-                            <option value="1">Elegi uno</option>
-                            <option value="2">Nutrición saludable</option>
-                            <option value="3">Salud física</option>
-                            <option value="4">Equilibrio</option>
+                            <option value="">Elegi uno</option>
+                            <option value="1">Nutrición saludable</option>
+                            <option value="2">Salud física</option>
+                            <option value="3">Equilibrio</option>
                         </select>
                         <br><span class="error" id="errorConsulta"></span><br><br>
 
@@ -93,21 +92,21 @@
 
 
             
-                        <label for="merdioContacto">¿Prefieres que te respondamos a través de que medio?</label><br><br>
-                        <label for="contactoCorreo">Correo electrónico</label>
+                        <label>¿Prefieres que te respondamos a través de que medio?</label><br><br>
+                        <label for="merdioCcontactoCorreo">Correo electrónico</label>
                         <input type="radio" name="merdioContacto" id="merdioCcontactoCorreo" value="correo" required><br>
-                        <label for="contactoTelefono">Teléfono</label>
+                        <label for="merdioCcontactoTelefono">Teléfono</label>
                         <input type="radio" name="merdioContacto" id="merdioCcontactoTelefono" value="telefono" required>
                         <br><br><br>
             
-                        <label for="suscripción">¿Deseas suscribirte a nuestro boletín semanal?</label><br><br>
+                        <label>¿Deseas suscribirte a nuestro boletín semanal?</label><br><br>
                         <label for="suscripcionSi">SI</label>
-                        <input type="radio" name="suscripción" id="suscripciónSi" value="si" required><br>
+                        <input type="radio" name="suscripción" id="suscripcionSi" value="si" required><br>
                         <label for="suscripcionNo">NO</label>
                         <input type="radio" name="suscripción" id="suscripcionNo" value="no" required>
                         <br><br><br>
             
-                        <label for="secciones">¿Qué nuevas secciones te gustaría ver en Integral Wellness?</label><br><br>
+                        <label>¿Qué nuevas secciones te gustaría ver en Integral Wellness?</label><br><br>
                         <input type="checkbox" name="secciones" id="secciones1" value="1"> Medicina alternativa.<br>
                         <input type="checkbox" name="secciones" id="secciones2" value="2"> Salud financiera.<br>
                         <input type="checkbox" name="secciones" id="secciones3" value="3"> Tecnología y bienestar.
@@ -155,9 +154,10 @@
                 <a href="https://instagram.com"><i class="fa-brands fa-instagram icon-redes-footer"></i></a>
                 <a href="https://whatsapp.com"><i class="fa-brands fa-whatsapp icon-redes-footer"></i></a>
                 <a href="https://youtube.com"><i class="fa-brands fa-youtube icon-redes-footer"></i></a>
+                <a href="info@integralwellness.com.ar"><i class="fa-regular fa-envelope icon-redes-footer"></i></a>
             </div>
             <div class="parrafo-footer">
-                <p>© 2024 Todos los derechos reservados | Sitio desarrollado por: Wellness.diseño</p></p>
+                <p>© 2024 Todos los derechos reservados | Sitio desarrollado por: Wellness.diseño</p>
             </div>
         </footer>
     </main>
