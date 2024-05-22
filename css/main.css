@@ -47,7 +47,7 @@ body {
 }
 
 h1{
-    line-height: 3em;
+    line-height: 2em;
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -79,6 +79,7 @@ h3{
     padding: 0em 0em;
     font-family: "Crimson Text", serif;
     font-size: 1.8em;
+    text-align: center ;
     /* background-color:  rgb(247, 3, 255); */
 }
 h4{
@@ -140,7 +141,7 @@ header img {
     text-transform: uppercase;
     font-size: 8.5vw;
     vertical-align: middle;
-    margin: .2em 6vw;
+    margin: .9em 6vw 6em 6vw;
 
 }
 
@@ -150,7 +151,7 @@ nav {
 }
 
 
-nav ul {
+nav ul , #submenu ul{
      
     list-style-type: none;
      padding: 0;
@@ -164,7 +165,7 @@ nav ul {
      
  }
 
- nav  li a{
+ nav  li a ,  #submenu  li a {
     background-color:  rgb(97, 72, 28);
     color:rgba(242, 225, 195,1);
     display: block;
@@ -178,10 +179,10 @@ nav ul {
     transition: .25s background-color,.25s border-color,.25s color,.25s fill;
  }
 
-nav li a:hover {
+nav li a:hover, #submenu li a:hover  {
     background-color:  rgb(116, 89, 42);
 }
-nav li a:active {
+nav li a:active, #submenu li a:active  {
     background-color:  rgb(99, 75, 35);
 }
 
@@ -390,7 +391,7 @@ tr:hover {
 
 form {
     /* background: #fff; */
-    padding: 20px;
+    padding: 0px;
     border-radius: 10px;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     /* max-width: 400px; */
@@ -450,6 +451,25 @@ form button:hover {
 
 
 
+/* para que js pueda diferenciar que muestra y que no  */
+
+#recDesayuno {
+    display: none;
+}
+
+#recAlmuerzo {
+    display: none;
+}
+
+#recMerienda {
+    display: none;
+}
+
+#recCena {
+    display: none;
+}
+
+/* fin ** para que js pueda diferenciar que muestra y que no  */
 
 
 /* tablet */
@@ -480,7 +500,7 @@ header img {
 
 
 
-  nav ul{
+  nav ul, #submenu ul{
     flex-direction: row;
     gap:.1em;
     flex-wrap: wrap;
@@ -493,7 +513,7 @@ header img {
 
 
 
-nav li a {
+nav li a, #submenu li a {
     justify-content:space-around;
 }
 
@@ -538,13 +558,13 @@ header img {
 }
 
 
-nav ul{
+nav ul , #submenu ul{
         gap:2em;
     }
     
     
     
-    nav li a {
+    nav li a, #submenu li a {
     margin: .1em, 10em;
     font-size: 1.3em;
     }

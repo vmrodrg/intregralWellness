@@ -1,7 +1,7 @@
 
 // carga formilario
 
-let loginForm = document.getElementById("Form");
+// let loginForm = document.getElementById("Form");
 
 // carga valores del formulario
 
@@ -137,3 +137,4 @@ if (!regUserName.test(nombre.value) ) {
   
 })
   
+

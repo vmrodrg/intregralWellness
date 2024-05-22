@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#desayuno {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(255, 81, 0);
+  margin-top: 20px;
+  display: none;
+}
+
+#almuerzo {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(9, 255, 0);
+  margin-top: 20px;
+  display: none;
+}
+
+#merienda {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(4, 0, 255);
+  margin-top: 20px;
+  display: none;
+}
+
+#cena {
+  width: 100%;
+  padding: 50px 0;
+  text-align: center;
+  background-color: rgb(247, 0, 255);
+  margin-top: 20px;
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+
+
+<article id="submenu">
+    <h3>Sugetencias para comer mejor</h3>
+    <ul>
+        <li><a href="#" id="sdes" onclick="sdes()">desayuno</a></li>
+        <li><a href="#" id="salm" onclick="salm()">almuerzo</a></li>
+        <li><a href="#" id="smer" onclick="smer()">merienda</a></li>
+        <li><a href="#" id="scen" onclick="scen()">cena</a></li>
+    </ul>
+</article>
+
+
+
+
+    <div id="desayuno">
+        desayuno
+    </div>
+    <div id="almuerzo">
+        almuerzo
+    </div>
+    <div id="merienda">
+        merienda
+    </div>
+    <div id="cena">
+        cena
+    </div>
+
+<p><b>Note:</b> The element will not take up any space when the display property 
+is set to "none".</p>
+
+<script>
+    
+
+
+function sdes() {
+  var x = document.getElementById("desayuno");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  almuerzo.style.display = "none"
+  meri.style.display = "none"
+  cena.style.display = "none"
+}
+
+function salm() {
+  var x = document.getElementById("almuerzo");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  desayuno.style.display = "none"
+  merienda.style.display = "none"
+  cena.style.display = "none"
+}
+
+function smer() {
+  var x = document.getElementById("merienda");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  desayuno.style.display = "none"
+  almuerzo.style.display = "none"  
+  cena.style.display = "none"
+}
+
+function scen() {
+  var x = document.getElementById("cena");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+  desayuno.style.display = "none"
+  almuerzo.style.display = "none"
+  merienda.style.display = "none"
+  
+}
+
+
+</script>
+
+</body>
+</html>

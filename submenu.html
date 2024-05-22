@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+#decDesayuno {
+  display: none;
+}
+
+#decAlmuerzo {
+  display: none;
+}
+
+#decMerienda {
+  display: none;
+}
+
+#decCena {
+  display: none;
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to toggle between hiding and showing the DIV element:</p>
+
+<!-- <button onclick="myFunction()">Try it</button> -->
+
+
+<article id="submenu">
+    <h3>Sugetencias para comer mejor</h3>
+    <ul>
+        <li><a href="#" onclick="sdes()">desayuno</a></li>
+        <li><a href="#" onclick="salm()">almuerzo</a></li>
+        <li><a href="#" onclick="smer()">merienda</a></li>
+        <li><a href="#" onclick="scen()">cena</a></li>
+    </ul>
+</article>
+
+
+
+
+    <div id="decDesayuno">
+        desayuno
+    </div>
+    <div id="decAlmuerzo">
+        almuerzo
+    </div>
+    <div id="decMerienda">
+        merienda
+    </div>
+    <div id="decCena">
+        cena
+    </div>
+
+<p><b>Note:</b> The element will not take up any space when the display property 
+is set to "none".</p>
+
+<script>
+    
+
+
+function sdes() {
+  var x = document.getElementById("decDesayuno")
+  if (x.style.display === "block") {
+    x.style.display = "none"
+  } else {
+    x.style.display = "block"
+  }
+  decAlmuerzo.style.display = "none"
+  decMerienda.style.display = "none"
+  decCena.style.display = "none"
+}
+
+function salm() {
+  var x = document.getElementById("decAlmuerzo")
+  if (x.style.display === "block") {
+    x.style.display = "none"
+  } else {
+    x.style.display = "block"
+  }
+  decDesayuno.style.display = "none"
+  decMerienda.style.display = "none"
+  decCena.style.display = "none"
+}
+
+function smer() {
+  var x = document.getElementById("decMerienda")
+  if (x.style.display === "block") {
+    x.style.display = "none"
+  } else {
+    x.style.display = "block"
+  }
+  decDesayuno.style.display = "none"
+  decAlmuerzo.style.display = "none"  
+  decCena.style.display = "none"
+}
+
+function scen() {
+  var x = document.getElementById("decCena")
+  if (x.style.display === "block") {
+    x.style.display = "none"
+  } else {
+    x.style.display = "block"
+  }
+  decDesayuno.style.display = "none"
+  decAlmuerzo.style.display = "none"
+  decMerienda.style.display = "none"
+  
+}
+
+
+</script>
+
+</body>
+</html>
