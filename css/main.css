@@ -79,7 +79,7 @@ h3{
     padding: 0em 0em;
     font-family: "Crimson Text", serif;
     font-size: 1.8em;
-    text-align: center ;
+    text-align: left;
     /* background-color:  rgb(247, 3, 255); */
 }
 h4{
@@ -93,6 +93,9 @@ h5{
     font-size: 1.2em;
 }
 h6{
+    padding: 1em 0em;
+    font-family: "Crimson Text", serif;
+    font-size: 1.5em;
     text-align: center;
 }
 
@@ -180,10 +183,16 @@ nav ul , #submenu ul{
  }
 
 nav li a:hover, #submenu li a:hover  {
-    background-color:  rgb(116, 89, 42);
+    background-color:  rgb(117, 90, 43);
+    display: block;
+    /* color:rgb(97, 72, 28); */
+    box-shadow: 1px 1px 5px 2px rgba(0,0,0,.2);
+    /* border-bottom: .2em solid rgb(240, 130, 28); */
 }
 nav li a:active, #submenu li a:active  {
-    background-color:  rgb(99, 75, 35);
+    color:rgb(97, 72, 28);
+    background-color:  rgba(242, 225, 195,1);
+    box-shadow: -1px -1px 5px 2px rgba(0,0,0,.2);
 }
 
 section{
