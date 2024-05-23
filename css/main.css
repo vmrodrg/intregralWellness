@@ -451,26 +451,6 @@ form button:hover {
 
 
 
-/* para que js pueda diferenciar que muestra y que no  */
-
-#recDesayuno {
-    display: none;
-}
-
-#recAlmuerzo {
-    display: none;
-}
-
-#recMerienda {
-    display: none;
-}
-
-#recCena {
-    display: none;
-}
-
-/* fin ** para que js pueda diferenciar que muestra y que no  */
-
 
 /* tablet */
 @media screen and (min-width: 700px){
