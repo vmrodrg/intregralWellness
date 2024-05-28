@@ -36,6 +36,19 @@
   }
   
 
+
+  :root {
+    --bdbg: rgba(242, 225, 195,1);
+    --h1bg: rgba(255, 255, 255, .9);
+    --h2bg: rgba(243, 243, 243,.2);
+    --bnbg: rgb(97, 72, 28);
+    --bhbg: rgb(117, 90, 43);
+    --logo: rgb(56, 41, 15);
+    --bshw: 3px 3px 5px 2px rgba(0,0,0,0.1);
+    --basw: -1px -1px 5px 2px rgba(0,0,0,.2);
+
+}
+
 *{
     margin: 0px;
     padding: 0px;
@@ -43,7 +56,7 @@
 }
 
 body {
-    background-color: rgba(242, 225, 195,1);
+    background-color: var(--bdbg);
 }
 
 h1{
@@ -53,16 +66,15 @@ h1{
     font-style: normal;
     font-size:3em;
     text-align: center;
-    /* background-color:  rgb(247, 3, 255); */
-    box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.1);
+    box-shadow: var(--bshw);
     border-radius: .2em;
     margin: .2em;
-    background-color: rgba(255, 255, 255, .9);
+    background-color: var(--h1bg);
 }
 
 h2{
     grid-area:section;
-    background-color: rgba(243, 243, 243,.2);
+    background-color: var(--h2bg);
     margin: .5em;
     border-radius: .5em;
     padding: 1em;
@@ -70,7 +82,7 @@ h2{
     font-weight: 400;
     font-style: normal;
     text-align: center ;
-    box-shadow: 3px 3px 5px 2px rgba(0,0,0,0.1);
+    box-shadow: var(--bshw);
     backdrop-filter: blur(10px);
 
 }
@@ -80,7 +92,6 @@ h3{
     font-family: "Crimson Text", serif;
     font-size: 1.8em;
     text-align: left;
-    /* background-color:  rgb(247, 3, 255); */
 }
 h4{
     padding: 1em 0em;
@@ -119,7 +130,7 @@ main{
 }
 
 
-
+/* header */
 
 
 header {
@@ -136,7 +147,7 @@ header img {
 }
 
 #logo {
-    color:rgb(56, 41, 15);
+    color: var(--logo);
     font-family: "Crimson Text", serif;
     font-weight: 400;
     font-style: normal;
@@ -148,9 +159,13 @@ header img {
 
 }
 
+
+
+/* nav  */
+
 nav {
     grid-area:nav;
-    /* background-color:  rgb(247, 3, 255); */
+    
 }
 
 
@@ -169,8 +184,8 @@ nav ul , #submenu ul{
  }
 
  nav  li a ,  #submenu  li a {
-    background-color:  rgb(97, 72, 28);
-    color:rgba(242, 225, 195,1);
+    background-color: var(--bnbg);
+    color: var(--bdbg);
     display: block;
     text-decoration: none;
     padding: .7em 1em;
@@ -183,53 +198,36 @@ nav ul , #submenu ul{
  }
 
 nav li a:hover, #submenu li a:hover  {
-    background-color:  rgb(117, 90, 43);
+    background-color: var(--bhbg);
     display: block;
-    /* color:rgb(97, 72, 28); */
-    box-shadow: 1px 1px 5px 2px rgba(0,0,0,.2);
-    /* border-bottom: .2em solid rgb(240, 130, 28); */
+    box-shadow:  var(--basw);
 }
 nav li a:active, #submenu li a:active  {
-    color:rgb(97, 72, 28);
-    background-color:  rgba(242, 225, 195,1);
-    box-shadow: -1px -1px 5px 2px rgba(0,0,0,.2);
+    color: var(--bnbg);
+    background-color: var(--bdbg);
+    box-shadow: var(--basw);
 }
 
+
+/* main content  */
 section{
     grid-area:section;
-    margin: .5em;
+    margin: .5em .5em .25em .5em;
     border-radius: 1em;
     padding: .2em;
-    /* background-color:  rgb(247, 3, 255); */
-        background-color: rgba(243, 243, 243,.8);
+        background-color: var(--h1bg);
+        
 }
-/* section #recetas, section #salud, section #equilibrio, section #contacto { */
-    /* background-color: rgba(243, 243, 243,.8); */
-    /* background-color:  rgb(247, 3, 255); */
-/* }
-section #portada {
-    background-color:transparent;
-} */
-
-
-
-/* section img {
-    height: 18vw;
-    margin: 0em auto;
-    text-align: center;
-    display: block;
-
-} */
 
 
 
 
 article {
-    background-color: rgba(255, 255, 255, .9);
+    background-color: var(--h1bg);
     margin: .5em;
     border-radius: .5em;
     padding: 2em;
-    box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.1);
+    box-shadow: var(--bshw);
 }
 
 .nutrición p{
@@ -253,9 +251,9 @@ article h4{
 
 aside {
     grid-area:aside;
-    background-color: rgba(245, 245, 245, 0.9);
-    margin: .5em;
-    border-radius: .5em;
+    background-color: var(--h1bg);
+    margin: .25em .5em .5em .5em;
+    border-radius: 1em;
     padding: 2em;
     height: auto;
 }
@@ -272,9 +270,8 @@ aside h4 {
 
 footer {
     grid-area:footer;
-   background-color:  rgb(97, 72, 28);
-    /* background-image: linear-gradient(200deg,rgb(34, 26, 2) 30%,rgba(15, 11, 4, 0) 100%); */
-    color:rgba(242, 225, 195,1);
+   background-color: var(--bnbg);
+    color: var(--bdbg);
     padding: 1em;
     text-align: center;
 
@@ -300,15 +297,12 @@ footer .parrafo-footer{
 
 footer a , footer a:visited {
     text-decoration: none;
-    color:rgba(242, 225, 195,1);
+    color: var(--bdbg);
 }
-
-/* .receta {
-} */
 
 .receta img{
     border-radius: 2em;
-    box-shadow: 5px 5px 7px 1px rgba(0,0,0,0.2);
+    box-shadow: var(--bshw);
     float: right;
     height: 150px;
     width: 150px;
@@ -317,23 +311,8 @@ footer a , footer a:visited {
 
 
 .receta li {
-    /* list-style-type: none; */
     margin: 0px 1em 0em 4em;
-    /* padding: 0px 1em 0em 5em; */
-    /* background-color:  rgb(255, 0, 234); */
 }
-/* #index h2{ */
-    /* grid-area:section; */
-    /* background-color: rgba(243, 243, 243,.3);
-    margin: .5em;
-    border-radius: .5em;
-    padding: 1em;
-    font-family: "Crimson Text", serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center ;
-
-} */
 
 
 .equilibrio {
@@ -343,20 +322,13 @@ footer a , footer a:visited {
 .equilibrio audio {
     width: 90%;
 }
-/* 
-.equilibrio video, .equilibrio iframe {
-    border-radius: 2em;
-    width: 70vw;
-    height: 40vw;
-    vertical-align: middle;
-} */
+
 
 
 video, iframe {
     border-radius: 1.5em;
     width: 70vw;
     height: 40vw;
-    /* background-color:  rgb(51, 50, 49); */
     vertical-align: middle;
 }
 
@@ -364,8 +336,6 @@ video, iframe {
 
 table {
     width: 100%;
-    background-color: #fff;
-    /* background-color:  rgb(255, 0, 234); */
     text-align: center;
     border-radius: 1em;
     
@@ -373,20 +343,12 @@ table {
 }
 
 table th{
-    background-color:  rgb(97, 72, 28);
-    color:rgba(242, 225, 195,1);
+    background-color: var(--bnbg);
+    color: var(--bdbg);
     padding: .5em;
-    /* border-radius: 1em 1em 0em 0em; */
 }
 
 
-/* table tr th .header{ */
-    /* background-color:  rgb(97, 72, 28);
-    color:rgba(242, 225, 195,1);
-    padding: .5em; */
-    /* border-radius: 1em 1em 0em 0em; */
-    /* background-color:  rgb(255, 0, 234); */
-/* } */
 
 table td{
     padding: .5em;
@@ -398,10 +360,10 @@ table th:first-child{
 table th:last-child{
     border-radius: 0em 1em 0em 0em;
 }
-tr:nth-child(even) {background-color: #f2f2f2;}
+tr:nth-child(odd) {background-color: #f2f2f2;}
 
 tr:hover {
-    background-color: rgba(242, 225, 195,1);
+    background-color: var(--bdbg);
     border-radius: 1em;
 }
 
@@ -409,19 +371,15 @@ tr:hover {
 
 
 
-
+/* form  */
 
 
 
 
 
 form {
-    /* background: #fff; */
     padding: 0px;
     border-radius: 10px;
-    /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
-    /* max-width: 400px; */
-    /* width: 60vw; */
     text-align: center;
     margin: 0px;
 }
@@ -429,18 +387,16 @@ form {
 form h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #333;
+    color:  var(--logo);
 }
 
 form label {
-    /* display: block; */
     margin-bottom: 5px;
     color: #666;
 }
 
 form input,
 form textarea {
-    /* width: 55vw; */
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
@@ -449,9 +405,8 @@ form textarea {
 }
 
 form button {
-    /* width: 100%; */
     padding: 10px;
-    background: #007BFF;
+    background:  var(--logo);
     border: none;
     border-radius: 5px;
     color: #fff;
@@ -460,13 +415,13 @@ form button {
 }
 
 form button:hover {
-    background: #0056b3;
+    background: var(--bnbg);
 }
 
 #responseMessage {
     margin-top: 20px;
     font-size: 16px;
-    color: #333;
+    color: var(--logo);
 }
 
 .error {
@@ -474,19 +429,12 @@ form button:hover {
     font-weight: 600;
 }
 
-/* 
-.ejercicios iframe{
-    border-radius: 2em;
-    width: 70vw;
-    height: 35vw;
-    vertical-align: middle;
-} */
 .ejercicios{
     text-align: center;
     font-size: 20px;
 }
 .ejercicios span{
-    color: rgb(97, 72, 28);
+    color:  var(--bnbg);
 }
 
 
@@ -560,8 +508,14 @@ nav li a, #submenu li a {
       "section aside"
       "footer footer";
   }
-  
 
+section {
+    margin: .25em .25em .5em .5em;
+}
+
+aside {
+    margin-left: .25em;
+}
 
 
 
@@ -596,34 +550,10 @@ nav ul , #submenu ul{
         width: 300px;
     }
 
-    .equilibrio video, .equilibrio iframe {
+    video, iframe {
         width: 55vw;
         height: 31vw;
     }
-    
+
+   
 }
-
-
-
-
-
-
-/* adicional temas oscuros */
-
-
-
-/* @media (prefers-color-scheme: ligth) { */
-/* @media (prefers-color-scheme: dark) {
-    @media screen and (max-width: 699px){
-        
-        
-    }
-
-    @media screen and (min-width: 700px, max-width: 999px){
-        
-    }
-    
-    @media screen and (min-width: 1000px){
-        
-    }
-} */
