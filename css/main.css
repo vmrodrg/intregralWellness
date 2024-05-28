@@ -91,7 +91,6 @@ h3{
     padding: 0em 0em;
     font-family: "Crimson Text", serif;
     font-size: 1.8em;
-    text-align: left;
 }
 h4{
     padding: 1em 0em;
@@ -230,7 +229,7 @@ article {
     box-shadow: var(--bshw);
 }
 
-.nutrición p{
+.receta p{
     margin: 10px 15px;
     text-align: justify;
     padding: 5px;
@@ -243,6 +242,11 @@ article {
 }
 .salud .salud1{
     text-align: center;
+}
+
+.poder p{
+    text-align: center;
+    margin-top: 10px;
 }
 
 article h4{
@@ -260,6 +264,7 @@ aside {
 
 aside p {
     text-align: center;
+    margin:5px;
 }
 
 aside h4 {
